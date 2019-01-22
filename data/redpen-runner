@@ -6,3 +6,5 @@ if [ $# -ge 1 ]; then
 else
   $REDPEN_HOME/bin/redpen -f latex -r xml -c $REDPEN_HOME/redpen-conf.xml /dev/stdin 2>/dev/null
 fi
+
+exit $?
