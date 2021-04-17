@@ -5,7 +5,7 @@ ENV REDPEN_HOME /redpen
 ENV REDPEN_TMP /tmp/redpen
 ENV REDPEN_REPO_TMP /tmp/redpen/repo
 RUN mkdir $REDPEN_HOME \
-    && apt-get update && apt-get install -y --no-install-recommends maven curl unzip \
+    && apt-get update && apt-get install -y --no-install-recommends maven curl unzip perl \
     && mkdir $REDPEN_TMP \
     && mkdir $REDPEN_REPO_TMP \
     && curl -Ss -L https://github.com/redpen-cc/redpen/releases/download/redpen-1.10.1/redpen-1.10.1.tar.gz | tar zx -C $REDPEN_HOME --strip-components 1 \
